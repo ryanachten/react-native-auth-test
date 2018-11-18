@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 
 const styles = {
   buttonStyle: {
@@ -25,11 +25,13 @@ const styles = {
 const Button = ({ children, onPress }) => {
   const { buttonStyle, textStyle } = styles;
   return (
-    <TouchableOpacity style={buttonStyle} onPress={onPress} >
-      <Text style={textStyle}>
-        {children}
-      </Text>
-    </TouchableOpacity>
+    <View style={{ flexDirection: 'row' }}>
+      <TouchableOpacity style={buttonStyle} onPress={onPress} >
+        <Text style={textStyle}>
+          {children}
+        </Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 

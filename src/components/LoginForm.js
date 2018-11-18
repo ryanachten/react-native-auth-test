@@ -29,15 +29,13 @@ class LoginForm extends Component {
   }
 
   onLoginFail(err) {
-    console.log('onLoginFail', err)
     this.setState({
       error: `Authentication failed - ${err}`,
       loading: false
     });
   }
 
-  onLoginSuccess(res) {
-    console.log('onLoginSuccess', res)
+  onLoginSuccess() {
     this.setState({
       loading: false,
       error: '',
