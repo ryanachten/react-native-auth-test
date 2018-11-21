@@ -33,7 +33,13 @@ class App extends Component {
       case false:
         return <LoginForm />;
       case true:
-        return <Button>Log Out</Button>;
+        return (
+          <View style={{ flexDirection: 'row' }}>
+            <Button onPress={() => firebase.auth().signOut()}>
+              Log Out
+            </Button>
+          </View>
+        );
       default:
         return (
           <View style={{ paddingTop: 40 }}>

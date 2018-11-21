@@ -25,13 +25,11 @@ const styles = {
 const Button = ({ children, onPress }) => {
   const { buttonStyle, textStyle } = styles;
   return (
-    <View style={{ flexDirection: 'row' }}>
-      <TouchableOpacity style={buttonStyle} onPress={onPress} >
-        <Text style={textStyle}>
-          {children}
-        </Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity style={buttonStyle} onPress={onPress} >
+      <Text style={textStyle}>
+        {children}
+      </Text>
+    </TouchableOpacity>
   );
 };
 
